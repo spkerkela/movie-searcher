@@ -69,6 +69,7 @@ $(function(){
       .append(createULElement('Directors', movie.Director.split(', ')))
       .append(createULElement('Actors', movie.Actors.split(', ')))
       .append(createULElement('Genre', movie.Genre.split(', ')))
+      .append($('<p>').text('IMDB Rating with ' + movie.imdbVotes + ' votes: ' + movie.imdbRating));
   }
 
   var movies = distinct
