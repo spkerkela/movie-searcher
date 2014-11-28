@@ -80,7 +80,7 @@ $(function(){
       console.log(JSON.parse(data));
       var parsed = JSON.parse(data);
 
-      if(parsed.Response === 'False') {
+      if (parsed.Response === 'False') {
         $('#results')
         .empty()
         .append($('<li>').text("No results found."))
@@ -108,7 +108,9 @@ $(function(){
       }
     },
     function (error) {
-      $results.empty().append($('<li>').text('Error calling OMDB:' + error));
+      $results
+        .empty()
+        .append($('<li>').text('Error calling OMDB:' + error));
       clicks.dispose();
     });
 }).foundation();
